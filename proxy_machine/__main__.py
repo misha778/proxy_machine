@@ -87,7 +87,6 @@ def cli():
     argparser.add_argument(
         "-pc",
         "--proxy-checker",
-        default=False,
         action="store_true",
         help="If you want to keep only working proxies use this. " "Default set False.",
     )
@@ -110,8 +109,7 @@ def cli():
     argparser.add_argument(
         "-a",
         "--async-enabled",
-        default=True,
-        type=bool,
+        action="store_true",
         help="The proxy check will be async",
     )
     argparser.add_argument("-i", "--infile", default=None, type=str, help="Use the proxies.txt for pc checking")
